@@ -1,0 +1,14 @@
+
+mystring = "abcdxyz"
+substring = "xyz"
+
+def getIndex(mystring , substring):
+    for x in range(0,len(mystring)):
+        if mystring[x] == substring[0]:
+            index = x
+            if substring in mystring[x: x+len(substring)]:
+                return index
+
+    return -1
+
+print getIndex(mystring,substring)
